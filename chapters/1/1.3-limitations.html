@@ -1,0 +1,981 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>1.3 AI大模型的局限 · AI新手效率手册</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 4.0.8">
+        <meta name="author" content="John Doe">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../2/" />
+    
+    
+    <link rel="prev" href="1.2-capabilities.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="theme-toggle" onclick="toggleTheme()">
+    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+</div>
+
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../preface.html">
+            
+                <a href="../../preface.html">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../disclaimer.html">
+            
+                <a href="../../disclaimer.html">
+            
+                    
+                    申明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第1章 初识AI大模型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="1.1-basic-concepts.html">
+            
+                <a href="1.1-basic-concepts.html">
+            
+                    
+                    1.1 AI相关的基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="1.2-capabilities.html">
+            
+                <a href="1.2-capabilities.html">
+            
+                    
+                    1.2 AI大模型可以干什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="1.3-limitations.html">
+            
+                <a href="1.3-limitations.html">
+            
+                    
+                    1.3 AI大模型的局限
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../2/">
+            
+                <a href="../2/">
+            
+                    
+                    第2章 如何向AI大模型提问
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../2/2.1/">
+            
+                <a href="../2/2.1/">
+            
+                    
+                    2.1 提问原则
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../2/2.1/2.1.1-specific-content.html">
+            
+                <a href="../2/2.1/2.1.1-specific-content.html">
+            
+                    
+                    2.1.1 内容具体明确
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../2/2.1/2.1.2-format-symbols.html">
+            
+                <a href="../2/2.1/2.1.2-format-symbols.html">
+            
+                    
+                    2.1.2 格式上使用符号或标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../2/2.2/">
+            
+                <a href="../2/2.2/">
+            
+                    
+                    2.2 初级提问技巧
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../2/2.2/2.2.1-automat.html">
+            
+                <a href="../2/2.2/2.2.1-automat.html">
+            
+                    
+                    2.2.1 AUTOMAT 框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../2/2.2/2.2.2-few-shot.html">
+            
+                <a href="../2/2.2/2.2.2-few-shot.html">
+            
+                    
+                    2.2.2 少样本学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../2/2.3/">
+            
+                <a href="../2/2.3/">
+            
+                    
+                    2.3 进阶提问技巧
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../2/2.3/2.3.1-chain-of-thought.html">
+            
+                <a href="../2/2.3/2.3.1-chain-of-thought.html">
+            
+                    
+                    2.3.1 思维链提示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../2/2.3/2.3.2-react.html">
+            
+                <a href="../2/2.3/2.3.2-react.html">
+            
+                    
+                    2.3.2 ReAct框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../2/2.4-prompt-examples.html">
+            
+                <a href="../2/2.4-prompt-examples.html">
+            
+                    
+                    2.4 提示词示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../3/">
+            
+                <a href="../3/">
+            
+                    
+                    第3章 AI大模型初级运用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../3/3.1/">
+            
+                <a href="../3/3.1/">
+            
+                    
+                    3.1 把AI嵌入你的工作流
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../3/3.1/3.1.1-which-model.html">
+            
+                <a href="../3/3.1/3.1.1-which-model.html">
+            
+                    
+                    3.1.1 使用何种大模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../3/3.1/3.1.2-workflow-integration.html">
+            
+                <a href="../3/3.1/3.1.2-workflow-integration.html">
+            
+                    
+                    3.1.2 如何嵌入工作流中
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../3/3.2-ai-programming.html">
+            
+                <a href="../3/3.2-ai-programming.html">
+            
+                    
+                    3.2 用AI辅助编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../3/3.3/">
+            
+                <a href="../3/3.3/">
+            
+                    
+                    3.3 如何在本地运行大模型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../3/3.3/3.3.1-ollama.html">
+            
+                <a href="../3/3.3/3.3.1-ollama.html">
+            
+                    
+                    3.3.1 Ollama + Anything/open-webui
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.2" data-path="../3/3.3/3.3.2-jan.html">
+            
+                <a href="../3/3.3/3.3.2-jan.html">
+            
+                    
+                    3.3.2 Jan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.3" data-path="../3/3.3/3.3.3-localai.html">
+            
+                <a href="../3/3.3/3.3.3-localai.html">
+            
+                    
+                    3.3.3 LocalAI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../4/">
+            
+                <a href="../4/">
+            
+                    
+                    第4章 AI大模型进阶运用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../4/4.1-knowledge-base.html">
+            
+                <a href="../4/4.1-knowledge-base.html">
+            
+                    
+                    4.1 搭建个人知识库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../4/4.2/">
+            
+                <a href="../4/4.2/">
+            
+                    
+                    4.2 使用AI代理实现工作自动化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="../4/4.2/4.2.1-why-ai-agents.html">
+            
+                <a href="../4/4.2/4.2.1-why-ai-agents.html">
+            
+                    
+                    4.2.1 为什么使用AI代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.2" data-path="../4/4.2/4.2.2-office-automation.html">
+            
+                <a href="../4/4.2/4.2.2-office-automation.html">
+            
+                    
+                    4.2.2 用AI代理实现办公自动化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../4/4.3/">
+            
+                <a href="../4/4.3/">
+            
+                    
+                    4.3 微调实现特定任务的AI大模型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.3.1" data-path="../4/4.3/4.3.1-classic-applications.html">
+            
+                <a href="../4/4.3/4.3.1-classic-applications.html">
+            
+                    
+                    4.3.1 微调大模型的经典应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.2" data-path="../4/4.3/4.3.2-how-to-finetune.html">
+            
+                <a href="../4/4.3/4.3.2-how-to-finetune.html">
+            
+                    
+                    4.3.2 如何微调大模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../postscript.html">
+            
+                <a href="../../postscript.html">
+            
+                    
+                    后记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../appendix/appendix1-tools.html">
+            
+                <a href="../../appendix/appendix1-tools.html">
+            
+                    
+                    备查表1：常用的AI生产力工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../appendix/appendix2-information.html">
+            
+                <a href="../../appendix/appendix2-information.html">
+            
+                    
+                    备查表2：如何高效获取AI相关的信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../appendix/appendix3-books.html">
+            
+                <a href="../../appendix/appendix3-books.html">
+            
+                    
+                    备查表3：推荐的AI相关书籍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../../appendix/appendix4-papers.html">
+            
+                <a href="../../appendix/appendix4-papers.html">
+            
+                    
+                    备查表4：经典论文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../../appendix/appendix5-tech-stack.html">
+            
+                <a href="../../appendix/appendix5-tech-stack.html">
+            
+                    
+                    备查表5：AI时代的技术栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../../appendix/appendix6-courses.html">
+            
+                <a href="../../appendix/appendix6-courses.html">
+            
+                    
+                    备查表6：课程推荐
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >1.3 AI大模型的局限</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="13-ai大模型的局限">1.3 AI大模型的局限</h1>
+<p>在感叹AI大模型惊人能力的同时，我们也需要清醒地认识到它的局限性。</p>
+<p><strong>幻觉：AI的"创造性"错误</strong></p>
+<p>AI大模型最引人注目的局限之一是"幻觉"现象。这指的是AI有时会生成看似合理但实际上并不准确的信息。就像一位口若悬河的演说家，说得头头是道，却未必句句属实。</p>
+<p>造成这一现象的主要原因是，AI的知识仅限于训练数据；AI基于概率进行推理，而非绝对正确的逻辑；AI缺乏人类那种基于真实经验的理解能力和常识，人类认为的概念，不一定是AI认为的概念。</p>
+<p>为应对这一挑战，研究人员正在开发RAG（检索增强生成）技术。这项技术允许AI在生成回答时实时查阅最新资料，大大提高了信息的准确性。然而，用户在使用AI生成的重要信息时，仍需保持警惕并进行必要的验证。</p>
+<p><strong>长文本处理：AI的"记忆"困境</strong></p>
+<p>当需要处理特别长的文本时，AI可能会"遗忘"之前提到的重要信息，导致回答不连贯或前后矛盾。这个问题源于AI模型的设计特性——它们通常有一个固定的"注意力窗口"，超出这个窗口的信息就可能被忽视。</p>
+<p>为克服这一局限，科学家们正在探索多种方法，例如：开发更高效的长文本处理算法、增加模型的"记忆"容量、设计更智能的信息提取和总结机制</p>
+<p><strong>结构化数据：AI的薄弱环节</strong></p>
+<p>尽管AI在处理文字、图片、声音等非结构化数据方面表现出色，但在面对高度结构化的数据时，如复杂的财务报表，AI的表现就不那么令人满意了。</p>
+<p>这种局限性主要来源于大多数AI模型都是针对自然语言处理进行优化的；结构化数据经常需要精确的数值计算和严格的逻辑推理，AI在计算数学问题时感到困难。</p>
+<p>研究人员正在开发专门针对结构化数据的AI模型，或者提升AI的数学运算和逻辑推理能力（例如OpenAI o1）可以解决更复杂的推理。</p>
+<p><strong>AI的核心优势</strong></p>
+<p>认识到了AI的局限，我们应该充分利用AI的核心优势，例如：</p>
+<ul>
+<li>模式识别：能从海量数据中发现隐藏规律；</li>
+<li>快速学习和适应：迅速吸收并应用新知识；</li>
+<li>创造性组合：以新颖方式关联不同领域的信息。</li>
+</ul>
+<p>这些优势使AI在新材料发现、医学诊断等领域展现出巨大潜力。例如，A-Lab实验室使用AI指导机器人在17天内独自创造了41种新材料，成功率达71%，而传统科学家可能需要几个月才能完成类似的任务。Google DeepMind开发的GNoME算法预测了220万种晶体结构，其中38万种被验证为稳定，极大加速了新材料的发现和测试进程。</p>
+<p>我们有理由相信它将在未来扮演更加重要的角色。然而，AI是一种工具，其目的是增强而非取代人类能力。</p>
+<p>现在我们进入到如何向AI大模型提问章节，一起解锁AI大模型的能力。</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="1.2-capabilities.html" class="navigation navigation-prev " aria-label="Previous page: 1.2 AI大模型可以干什么">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../2/" class="navigation navigation-next " aria-label="Next page: 第2章 如何向AI大模型提问">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1.3 AI大模型的局限","level":"1.4.3","depth":2,"next":{"title":"第2章 如何向AI大模型提问","level":"1.5","depth":1,"path":"chapters/2/README.md","ref":"chapters/2/README.md","articles":[{"title":"2.1 提问原则","level":"1.5.1","depth":2,"path":"chapters/2/2.1/README.md","ref":"chapters/2/2.1/README.md","articles":[{"title":"2.1.1 内容具体明确","level":"1.5.1.1","depth":3,"path":"chapters/2/2.1/2.1.1-specific-content.md","ref":"chapters/2/2.1/2.1.1-specific-content.md","articles":[]},{"title":"2.1.2 格式上使用符号或标签","level":"1.5.1.2","depth":3,"path":"chapters/2/2.1/2.1.2-format-symbols.md","ref":"chapters/2/2.1/2.1.2-format-symbols.md","articles":[]}]},{"title":"2.2 初级提问技巧","level":"1.5.2","depth":2,"path":"chapters/2/2.2/README.md","ref":"chapters/2/2.2/README.md","articles":[{"title":"2.2.1 AUTOMAT 框架","level":"1.5.2.1","depth":3,"path":"chapters/2/2.2/2.2.1-automat.md","ref":"chapters/2/2.2/2.2.1-automat.md","articles":[]},{"title":"2.2.2 少样本学习","level":"1.5.2.2","depth":3,"path":"chapters/2/2.2/2.2.2-few-shot.md","ref":"chapters/2/2.2/2.2.2-few-shot.md","articles":[]}]},{"title":"2.3 进阶提问技巧","level":"1.5.3","depth":2,"path":"chapters/2/2.3/README.md","ref":"chapters/2/2.3/README.md","articles":[{"title":"2.3.1 思维链提示","level":"1.5.3.1","depth":3,"path":"chapters/2/2.3/2.3.1-chain-of-thought.md","ref":"chapters/2/2.3/2.3.1-chain-of-thought.md","articles":[]},{"title":"2.3.2 ReAct框架","level":"1.5.3.2","depth":3,"path":"chapters/2/2.3/2.3.2-react.md","ref":"chapters/2/2.3/2.3.2-react.md","articles":[]}]},{"title":"2.4 提示词示例","level":"1.5.4","depth":2,"path":"chapters/2/2.4-prompt-examples.md","ref":"chapters/2/2.4-prompt-examples.md","articles":[]}]},"previous":{"title":"1.2 AI大模型可以干什么","level":"1.4.2","depth":2,"path":"chapters/1/1.2-capabilities.md","ref":"chapters/1/1.2-capabilities.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","copy-code-button","expandable-chapters","-search","search-pro"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"copy-code-button":{"buttonText":"复制","tooltipText":"已复制"},"expandable-chapters":{},"search-pro":{},"highlight":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"John Doe","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"AI新手效率手册","language":"zh-hans","gitbook":"*"},"file":{"path":"chapters/1/1.3-limitations.md","mtime":"2024-12-05T02:48:44.999Z","type":"markdown"},"gitbook":{"version":"4.0.8","time":"2024-12-05T06:10:20.204Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+<script>
+    // 主题切换功能
+    function toggleTheme() {
+        const toggle = document.querySelector('.theme-toggle');
+        const body = document.body;
+        const isDark = body.getAttribute('data-theme') === 'dark';
+        
+        if (isDark) {
+            body.removeAttribute('data-theme');
+            toggle.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+        } else {
+            body.setAttribute('data-theme', 'dark');
+            toggle.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+        }
+    }
+
+    // 初始化主题和代码块功能
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedTheme = localStorage.getItem('theme');
+        const toggle = document.querySelector('.theme-toggle');
+        
+        if (savedTheme === 'dark') {
+            document.body.setAttribute('data-theme', 'dark');
+            toggle.classList.add('dark');
+        }
+
+        // 为每个代码块添加复制按钮
+        document.querySelectorAll('.markdown-section pre').forEach(block => {
+            const button = document.createElement('button');
+            button.className = 'copy-button';
+            button.textContent = '复制';
+            block.appendChild(button);
+
+            button.addEventListener('click', async () => {
+                const code = block.querySelector('code') || block;
+                const text = code.innerText;
+
+                try {
+                    await navigator.clipboard.writeText(text);
+                    button.textContent = '已复制！';
+                    button.classList.add('copied');
+                    
+                    setTimeout(() => {
+                        button.textContent = '复制';
+                        button.classList.remove('copied');
+                    }, 1500);
+                } catch (err) {
+                    console.error('复制失败:', err);
+                    button.textContent = '复制失败';
+                    setTimeout(() => {
+                        button.textContent = '复制';
+                    }, 1500);
+                }
+            });
+        });
+    });
+</script>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
