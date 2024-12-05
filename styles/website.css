@@ -1,0 +1,623 @@
+/* 全局变量 */
+:root {
+    --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    --font-mono: "SF Mono", Menlo, Consolas, Monaco, monospace;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f5f5f7;
+    --border-color: #d2d2d7;
+    --link-color: #0066cc;
+    --nav-bg: #fafafa;
+    --nav-border: rgba(0,0,0,.07);
+    --theme-toggle-bg: #ffffff;
+    --theme-toggle-border: #d2d2d7;
+    --code-bg: #f5f5f7;
+    --text-color: #333333;
+    --input-bg: #ffffff;
+    --placeholder-color: #cccccc;
+}
+
+/* 暗色主题变量 */
+body[data-theme="dark"] {
+    --text-primary: #e4e4e4;
+    --text-secondary: #a1a1a6;
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #1a1a1a;
+    --border-color: #3a3a3c;
+    --link-color: #2997ff;
+    --nav-bg: #1a1a1a;
+    --nav-border: #3a3a3c;
+    --theme-toggle-bg: #1a1a1a;
+    --theme-toggle-border: #3a3a3c;
+    --code-bg: #1a1a1a;
+    --text-color: #e4e4e4;
+    --input-bg: #1a1a1a;
+    --placeholder-color: #666666;
+}
+
+/* 基础样式 */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 确保所有区域使用变量颜色 */
+.book,
+.book-summary,
+.book-body,
+.book-body .body-inner,
+.page-wrapper,
+.markdown-section {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+/* 强制深色模式下的背景色 */
+body[data-theme="dark"] .book,
+body[data-theme="dark"] .book-summary,
+body[data-theme="dark"] .book-body,
+body[data-theme="dark"] .book-body .body-inner,
+body[data-theme="dark"] .page-wrapper,
+body[data-theme="dark"] .page-inner,
+body[data-theme="dark"] .markdown-section {
+    background-color: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+}
+
+/* 强制深色模式下移除所有背景图片 */
+body[data-theme="dark"] * {
+    background-image: none !important;
+}
+
+/* 代码块容器样式 */
+.markdown-section pre {
+    position: relative !important;  /* 确保复制按钮相对于代码块定位 */
+    padding: 24px !important;
+    margin: 1em 0 !important;
+    background: #f6f8fa !important;
+    border: none !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    max-width: 100% !important;  /* 限制最大宽度 */
+    overflow: auto !important;  /* 添加滚动条 */
+}
+
+/* 代码文本样式 */
+.markdown-section pre > code {
+    display: block !important;
+    padding: 0 !important;
+    padding-right: 24px !important;  /* 为复制按钮留出空间 */
+    margin: 0 !important;
+    font-family: "SF Mono", Consolas, Menlo, monospace !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    color: #24292e !important;
+    white-space: pre-wrap !important;  /* 确保文字换行 */
+    word-wrap: break-word !important;  /* 确保长单词换行 */
+    max-width: 100% !important;  /* 限制最大宽度 */
+}
+
+/* 复制按钮样式 */
+.markdown-section pre .copy-code-button {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 24px !important;
+    height: 100% !important;  /* 铺满整个高度 */
+    padding: 4px 0 !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    writing-mode: vertical-rl !important;
+    text-orientation: upright !important;
+    letter-spacing: 2px !important;
+    color: #57606a !important;
+    background-color: #ffffff !important;
+    border: none !important;
+    border-left: 1px solid rgba(31, 35, 40, 0.15) !important;
+    border-top-right-radius: 6px !important;
+    border-bottom-right-radius: 6px !important;
+    opacity: 0 !important;
+    transition: 0.2s ease !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* 代码块悬停时显示复制按钮 */
+.markdown-section pre:hover .copy-code-button {
+    opacity: 1 !important;
+}
+
+/* 复制按钮悬停效果 */
+.copy-code-button:hover {
+    color: #24292f !important;
+    background-color: #f3f4f6 !important;
+}
+
+/* 深色模式适配 */
+body[data-theme="dark"] .markdown-section pre {
+    background: #161b22 !important;
+}
+
+body[data-theme="dark"] .markdown-section pre > code {
+    color: #c9d1d9 !important;
+}
+
+body[data-theme="dark"] pre .copy-code-button {
+    color: #8b949e !important;
+    background-color: #21262d !important;
+    border-left-color: rgba(240, 246, 252, 0.1) !important;
+}
+
+body[data-theme="dark"] pre .copy-code-button:hover {
+    color: #c9d1d9 !important;
+    background-color: #30363d !important;
+}
+
+/* 确保内容左右对齐 */
+.markdown-section {
+    padding: 40px !important;
+}
+
+.page-inner {
+    max-width: 850px !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+}
+
+/* 代码块内的文本换行 */
+.markdown-section pre,
+.markdown-section code {
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+    word-break: break-word !important;
+}
+
+/* 内联代码样式 */
+.markdown-section code {
+    padding: 2px 6px !important;
+    margin: 0 2px !important;
+    font-size: 14px !important;
+    color: #333 !important;
+    background-color: #f8f9fa !important;
+    border-radius: 4px !important;
+}
+
+/* 深色模式内联代码 */
+body[data-theme="dark"] .markdown-section code {
+    color: #e4e4e4 !important;
+    background-color: #2d2d2d !important;
+}
+
+/* 搜索框样式 */
+.book-search-input {
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.book-search-input input {
+    background-color: transparent;
+    color: var(--text-primary);
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+
+/* 确保深色模式下的滚动条 */
+body[data-theme="dark"] ::-webkit-scrollbar-track {
+    background: var(--bg-secondary) !important;
+}
+
+body[data-theme="dark"] ::-webkit-scrollbar-thumb {
+    background: var(--border-color) !important;
+}
+
+/* 主题切换按钮 */
+.theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    cursor: pointer;
+    background: var(--theme-toggle-bg);
+    border: 2px solid var(--theme-toggle-border);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle .sun-icon,
+.theme-toggle .moon-icon {
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle .sun-icon {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.theme-toggle .moon-icon {
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.theme-toggle.dark .sun-icon {
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.theme-toggle.dark .moon-icon {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* 移除顶部导航栏的边框 */
+.book-header {
+    border-bottom: none !important;
+    border-top: none !important;
+}
+
+.book-summary {
+    border-right: none !important;
+}
+
+/* 确保深色模式下没有边框 */
+body[data-theme="dark"] .book-header,
+body[data-theme="dark"] .book-summary {
+    border: none !important;
+}
+
+/* 搜索框容器也移除边框 */
+.book-search-input {
+    border-bottom: none !important;
+}
+
+/* 移除顶部栏 */
+.book-header {
+    display: none !important;
+}
+
+/* 移除 HonKit 标记 */
+.honkit-cloak {
+    display: block !important;
+}
+.book {
+    display: block !important;
+}
+
+/* 基础样式 */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.book.font-family-1 {
+    font-family: var(--font-sans);
+}
+
+.book-summary {
+    background-color: var(--nav-bg);
+    border-right: 1px solid var(--nav-border);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.book-summary ul.summary li a {
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.book-summary ul.summary li.active > a {
+    color: var(--link-color);
+    font-weight: bold;
+}
+
+.book-body {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--bg-primary);
+    transition: background-color 0.3s ease;
+}
+
+.page-wrapper {
+    position: relative;
+    outline: none;
+    background-color: var(--bg-primary);
+    transition: background-color 0.3s ease;
+}
+
+.page-inner {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 30px 40px 30px;
+}
+
+/* 内容区域 */
+.markdown-section {
+    padding: 0;
+    max-width: 100%;
+    color: var(--text-primary);
+    font-size: 17px;
+    line-height: 1.6;
+    background-color: var(--bg-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 标题样式 */
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3,
+.markdown-section h4,
+.markdown-section h5,
+.markdown-section h6 {
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+/* 代码块内容样式 */
+.markdown-section code {
+    background-color: var(--code-bg);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+}
+
+/* 处理代码块内的所有元素 */
+.markdown-section pre > code * {
+    font-family: inherit !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 移除最后一个元素的下边距 */
+.markdown-section pre > code > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* 复制按钮样式 */
+.copy-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    height: 24px;
+    width: 24px;
+    padding: 0;
+    font-size: 12px;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-color);
+    opacity: 0;
+    transition: opacity 0.2s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.markdown-section pre:hover .copy-button {
+    opacity: 1;
+}
+
+.copy-button.copied {
+    background: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+}
+
+/* 链接样式 */
+.markdown-section a {
+    color: var(--link-color);
+    transition: color 0.3s ease;
+}
+
+/* 表格样式 */
+.markdown-section table {
+    border-collapse: collapse;
+}
+
+.markdown-section table th,
+.markdown-section table td {
+    border: 1px solid var(--border-color);
+    padding: 6px 13px;
+    background: var(--bg-primary);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.markdown-section table tr {
+    border-top: 1px solid var(--border-color);
+    background: var(--bg-primary);
+    transition: background-color 0.3s ease;
+}
+
+.markdown-section table tr:nth-child(2n) {
+    background: var(--bg-secondary);
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-primary);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+}
+
+/* 搜索框样式 */
+.book-search-input {
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    margin: 1em;
+}
+
+.book-search-input input {
+    background-color: transparent;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+    padding: 0.5em;
+}
+
+.book-search-input input::placeholder {
+    color: var(--placeholder-color);
+}
+
+/* 导航箭头样式 */
+.navigation-prev, .navigation-next {
+    color: var(--text-primary) !important;
+    transition: color 0.3s ease;
+}
+
+.navigation-prev:hover, .navigation-next:hover {
+    color: var(--link-color) !important;
+}
+
+.navigation {
+    background-color: var(--bg-primary);
+    border-top: 1px solid var(--border-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.navigation a {
+    color: var(--link-color);
+    transition: color 0.3s ease;
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 768px) {
+    .book-summary {
+        width: 80%;
+        transform: translate(-100%, 0);
+    }
+    
+    .book.with-summary .book-body {
+        transform: translate(0, 0);
+    }
+}
+
+.markdown-section blockquote {
+    border-left-color: var(--border-color);
+    background-color: var(--bg-secondary);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.markdown-section hr {
+    background-color: var(--border-color);
+    transition: background-color 0.3s ease;
+}
+
+/* 代码块内容样式优化 */
+[data-theme="dark"] .markdown-section pre {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .markdown-section code {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* 强制移除所有边框和分隔线 */
+.book-header,
+.book-header .js-toolbar-action,
+.book-summary,
+.book-summary ul.summary,
+.book-body .body-inner,
+.book-body .page-wrapper,
+.navigation-next, 
+.navigation-prev,
+.book-header .btn,
+.book-header h1,
+#book-search-input,
+.book-summary ul.summary li.divider {
+    border: none !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    box-shadow: none !important;
+}
+
+/* 特别处理深色模式 */
+body[data-theme="dark"] .book-header,
+body[data-theme="dark"] .book-summary,
+body[data-theme="dark"] .book-body,
+body[data-theme="dark"] #book-search-input,
+body[data-theme="dark"] .book-summary ul.summary,
+body[data-theme="dark"] .book-summary ul.summary li.divider {
+    border: none !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    box-shadow: none !important;
+}
+
+/* 移除所有分隔线 */
+hr,
+.divider,
+.divider:after,
+.divider:before {
+    display: none !important;
+    border: none !important;
+    height: 0 !important;
+}
+
+/* 移除搜索框边框 */
+.book-search-input {
+    border: none !important;
+    background: transparent !important;
+}
+
+/* 确保内容区域没有边框 */
+.page-inner section {
+    border: none !important;
+    box-shadow: none !important;
+}

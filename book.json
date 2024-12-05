@@ -1,0 +1,21 @@
+{
+    "title": "AI新手效率手册",
+    "author": "John Doe",
+    "language": "zh-hans",
+    "plugins": [
+        "-sharing",
+        "copy-code-button",
+        "expandable-chapters",
+        "-search",
+        "search-pro"
+    ],
+    "pluginsConfig": {
+        "copy-code-button": {
+            "buttonText": "复制",
+            "tooltipText": "已复制"
+        }
+    },
+    "structure": {
+        "readme": "README.md"
+    }
+}

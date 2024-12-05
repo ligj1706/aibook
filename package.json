@@ -1,0 +1,23 @@
+{
+  "name": "AI新手效率手册",
+  "version": "1.0.0",
+  "description": "本书旨在帮助新手快速掌握AI大模型应用技能，进入AI新时代",
+  "main": "index.js",
+  "scripts": {
+    "serve": "honkit build && honkit serve",
+    "build": "honkit build",
+    "pdf": "honkit pdf",
+    "epub": "honkit epub",
+    "mobi": "honkit mobi"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gitbook-plugin-copy-code-button": "^0.0.2",
+    "gitbook-plugin-expandable-chapters": "^0.2.0",
+    "gitbook-plugin-search-pro": "^2.0.2",
+    "gitbook-plugin-theme-comscore": "^0.0.3",
+    "honkit": "^4.0.8"
+  }
+}
